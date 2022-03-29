@@ -1,0 +1,10 @@
+script.Parent.MouseButton1Click:Connect(function()
+	local folder = Instance.new("Folder")
+	folder.Parent = game.Workspace
+	while true do
+		local part = Instance.new("Part")
+		part.Parent = folder
+		part.Anchored = false
+		wait()
+	end
+end)
