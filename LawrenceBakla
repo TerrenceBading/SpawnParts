@@ -1,0 +1,47 @@
+--Terence Real Bading
+--Made By Boyrobuxxxnx
+local PartSpawner = Instance.new("ScreenGui")
+local TextButton = Instance.new("TextButton")
+local UIGradient = Instance.new("UIGradient")
+
+--Properties:
+
+PartSpawner.Name = "Part Spawner"
+PartSpawner.Parent = game.Workspace
+PartSpawner.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextButton.Parent = PartSpawner
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BorderColor3 = Color3.fromRGB(49, 53, 53)
+TextButton.BorderSizePixel = 5
+TextButton.Position = UDim2.new(0.416119993, 0, 0.0565370917, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "CLICK THIS"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 30.000
+TextButton.TextWrapped = true	
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)), ColorSequenceKeypoint.new(0.07, Color3.fromRGB(255, 6, 156)), ColorSequenceKeypoint.new(0.14, Color3.fromRGB(186, 10, 255)), ColorSequenceKeypoint.new(0.23, Color3.fromRGB(45, 8, 255)), ColorSequenceKeypoint.new(0.31, Color3.fromRGB(21, 173, 255)), ColorSequenceKeypoint.new(0.39, Color3.fromRGB(34, 255, 152)), ColorSequenceKeypoint.new(0.46, Color3.fromRGB(12, 255, 0)), ColorSequenceKeypoint.new(0.53, Color3.fromRGB(129, 255, 12)), ColorSequenceKeypoint.new(0.60, Color3.fromRGB(213, 255, 23)), ColorSequenceKeypoint.new(0.67, Color3.fromRGB(255, 106, 0)), ColorSequenceKeypoint.new(0.74, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.81, Color3.fromRGB(255, 72, 72)), ColorSequenceKeypoint.new(0.89, Color3.fromRGB(184, 171, 255)), ColorSequenceKeypoint.new(0.95, Color3.fromRGB(111, 255, 207)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = TextButton
+
+-- Scripts:
+
+local function ZCBB_fake_script() -- TextButton.Script 
+	local script = Instance.new('Script', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local folder = Instance.new("Folder")
+		folder.Parent = game.Workspace
+		while true do
+			local part = Instance.new("Part")
+			part.Parent = folder
+			part.Anchored = false
+			wait()
+		end
+	end)
+end
+coroutine.wrap(ZCBB_fake_script)()
+
+print('Terrence and Lawrence Kantutan Caught on Camera')
